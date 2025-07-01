@@ -44,6 +44,11 @@ if uploaded_file is not None:
     datospyg = StreamlitRenderer(dataframe,appearance="dark")
     pyg.walk(dataframe,appearance="dark")
 
+
+    # Con esto muestro los datos y los muestro en la aplicacion
+    datospyg.explorer()
+
+
     #mdf=pd.DataFrame(dataframe)
     #nom_colum=mdf.columns
     #numero_col=mdf.shape[1]
