@@ -41,9 +41,10 @@ if uploaded_file is not None:
 
     # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file,sep=";")
-    datospyg = StreamlitRenderer(dataframe,appearance="dark")
-    pyg.walk(dataframe,appearance="dark",kernel_computation=True)
-    
+    StreamlitRenderer(dataframe,appearance="dark")
+    pyg_html=pyg.walk(dataframe)
+# Mostrar el HTML de PyGWalker en Streamlit
+    st.components.v1.html(pyg_html, width=1300, height=1000, scrolling=True)
 
 
 
