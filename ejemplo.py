@@ -42,7 +42,8 @@ if uploaded_file is not None:
     # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file,sep=";")
     datospyg = StreamlitRenderer(dataframe,appearance="dark")
-    pyg.walk(dataframe,appearance="dark")
+    pyg.walk(dataframe,appearance="dark",kernel_computation=True)
+
 
 
     # Con esto muestro los datos y los muestro en la aplicacion
