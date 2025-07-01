@@ -30,21 +30,23 @@ if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
     #st.write(bytes_data)
+    #st.print("ENo hay Archivo seleccionado")
+
 
     # To convert to a string based IO:
-    stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+    #stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
     #st.write(stringio)
 
     # To read file as string:
-    string_data = stringio.read()
+    #string_data = stringio.read()
     #st.write(string_data)
 
     # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file,sep=";")
-    StreamlitRenderer(dataframe,appearance="dark")
-    pyg_html=pyg.walk(dataframe)
+    #StreamlitRenderer(dataframe,appearance="dark")
+    walker = pyg.walk(dataframe)
 # Mostrar el HTML de PyGWalker en Streamlit
-    st.components.v1.html(pyg_html, width=1300, height=1000, scrolling=True)
+    #st.components.v1.html(pyg_html, width=1300, height=1000, scrolling=True)
 
 
 
