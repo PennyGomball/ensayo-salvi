@@ -8,7 +8,7 @@ st.set_page_config(
     layout="wide"
 )
 # Import your data
-dataf=pd.read_csv('/workspace/Miensayo/ventasejemplo.csv',sep=";")
+dataf=pd.read_csv('/workspaces/ensayo-salvi/ventasejemplo.csv',sep=";")
 
 
  
