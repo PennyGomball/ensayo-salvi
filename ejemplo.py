@@ -46,7 +46,7 @@ if uploaded_file is not None:
 
 
     # Con esto muestro los datos y los muestro en la aplicacion
-    datospyg.explorer()
+    #datospyg.explorer()
 
 
     #mdf=pd.DataFrame(dataframe)
