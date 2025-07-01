@@ -43,6 +43,8 @@ if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file,sep=";")
     datospyg = StreamlitRenderer(dataframe,appearance="dark")
     pyg.walk(dataframe,appearance="dark",kernel_computation=True)
+    
+
 
 
 
