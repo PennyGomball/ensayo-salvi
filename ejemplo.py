@@ -8,6 +8,19 @@ from io import StringIO
 
 # defino laa columnas
 col1,col2=st.columns([0.7,0.3])
+usu= st.selectbox("Ingrese su nombre de usuario", st.secrets["Usuarios"]["usuario"] )
+clave   = st.text_input("Ingrese su clave", type="password")
+if usu == st.secrets["Usuarios"]["usuario"] and clave == st.secrets["Usuarios"]["clave"]:
+    col2.write("Bienvenido " + usu)
+    st.experimental_user=usu
+    
+else:
+    col2.write("Usuario o clave incorrectos")
+    st.stop()   
+
+
+
+
 
 with col1:
     col1.write("Esto ")
